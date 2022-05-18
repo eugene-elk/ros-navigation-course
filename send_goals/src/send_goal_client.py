@@ -6,7 +6,6 @@ from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal, MoveBaseResult, Mov
 
 
 def feedback_callback(feedback):
-
     print('[Feedback] Going to Goal Pose...')
 
 
