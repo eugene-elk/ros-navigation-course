@@ -50,13 +50,7 @@ goals[2].target_pose.pose.orientation.w = 0.8
 
 print(goals)
 
-client.send_goal(goals[0], feedback_cb=feedback_callback)
-
-# Uncomment these lines to test goal preemption:
-# time.sleep(3.0)
-# client.cancel_goal()  # would cancel the goal 3 seconds after starting
-
-
-client.wait_for_result()
-
-print("[Result] State: ", (client.get_state()))
+for goal in goals:
+    client.send_goal(goal, feedback_cb=feedback_callback)
+    client.wait_for_result()
+    print("[Result] State: ", (client.get_state()))
