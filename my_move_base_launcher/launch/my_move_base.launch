@@ -20,8 +20,8 @@
     <rosparam file="$(find my_move_base_launcher)/params/my_move_base_params.yaml" command="load"/>
 
     <!-- observation sources located in costmap_common.yaml -->
-    <rosparam file="$(find husky_navigation)/config/costmap_common.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find husky_navigation)/config/costmap_common.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find my_move_base_launcher)/params/my_common_costmap_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find my_move_base_launcher)/params/my_common_costmap_params.yaml" command="load" ns="local_costmap" />
 
     <!-- local costmap, needs size -->
     <rosparam file="$(find my_move_base_launcher)/params/my_local_costmap_params.yaml" command="load" ns="local_costmap" />
